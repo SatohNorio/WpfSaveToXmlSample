@@ -233,7 +233,15 @@ namespace WpfSaveToXmlSample
         /// <summary>
         /// DataGridのカラム情報を管理します。
         /// </summary>
-        public ColumnSettingCollection DataGridColumns { get; }
+        public ColumnSettingCollection DataGridColumns { get; private set; }
+
+        /// <summary>
+        /// WpfSaveToXmlSample.SettingFile クラスの新しいインスタンスを作成します。
+        /// </summary>
+        public SettingFile()
+        {
+            this.DataGridColumns = new ColumnSettingCollection();
+        }
     }
 
     /// <summary>
@@ -246,7 +254,6 @@ namespace WpfSaveToXmlSample
         /// </summary>
         public ColumnSettingCollection()
         {
-
         }
 
         /// <summary>
